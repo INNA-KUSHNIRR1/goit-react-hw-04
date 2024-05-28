@@ -38,8 +38,9 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: gray;
-  background-color: rgb(37, 37, 221);
+  /* border-color: gray; */
+  background: linear-gradient(to right, pink, blue);
+  /* background-color: rgb(37, 37, 221); */
 }
 button:focus,
 button:focus-visible {
