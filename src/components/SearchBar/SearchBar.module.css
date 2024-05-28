@@ -7,28 +7,33 @@
   row-gap: 4px;
 }
 .input {
+  font-size: 18px;
   outline: none;
-  height: 40px;
+  height: 60px;
   padding: 0;
-  border: none;
-  width: 240px;
+  width: 320px;
   border-radius: 4px;
   margin-right: 2px;
   box-sizing: border-box;
   padding: 8px;
-  border: 1px solid transparent;
+  border: 2px solid white;
   transition: border-color 0.25s;
+  background-color: inherit;
+  color: white;
 }
 .input:hover,
 .input:focus {
   border-color: gray;
 }
 .btn {
-  height: 40px;
-  width: 120px;
+  height: 60px;
+  width: 150px;
   border-radius: 4px;
   text-transform: uppercase;
 }
 .btn:active {
   border-color: gray;
+}
+.input::placeholder {
+  color: rgb(189, 187, 187);
 }

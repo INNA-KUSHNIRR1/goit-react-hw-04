@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 const notify = () =>
   toast.error("Please, write the text for he search images", {
     duration: 4000,
-    position: "top-center",
+    position: "bottom-center",
   });
 
 const SearchBar = () => {
