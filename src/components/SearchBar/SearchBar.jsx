@@ -1,13 +1,13 @@
 import style from "./SearchBar.module.css";
 import toast, { Toaster } from "react-hot-toast";
 
-const notify = () =>
-  toast.error("Please, write the text for he search images", {
-    duration: 4000,
-    position: "bottom-center",
-  });
-
 const SearchBar = () => {
+  const handleClick = () => {
+    toast("Please, write the text for the search images", {
+      duration: 4000,
+      position: "bottom-center",
+    });
+  };
   return (
     <header className={style.header}>
       <form className={style.form}>
@@ -18,7 +18,7 @@ const SearchBar = () => {
           autoFocus
           placeholder="Search images and photos"
         />
-        <button className={style.btn} type="submit" onClick={notify}>
+        <button className={style.btn} type="submit" onClick={handleClick}>
           Search
         </button>
         <Toaster />

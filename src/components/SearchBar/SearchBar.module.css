@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 4px;
+  row-gap: 8px;
 }
 .input {
   font-size: 18px;
@@ -25,15 +25,34 @@
 .input:focus {
   border-color: gray;
 }
+.input::placeholder {
+  color: rgb(189, 187, 187);
+}
 .btn {
   height: 60px;
   width: 150px;
   border-radius: 4px;
   text-transform: uppercase;
+  color: rgb(189, 187, 187);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #7360db;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 .btn:active {
   border-color: gray;
 }
-.input::placeholder {
-  color: rgb(189, 187, 187);
+
+.btn:hover {
+  background: linear-gradient(to right, pink, blue);
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: none;
+  border-color: gray;
+  background: linear-gradient(to right, pink, blue);
 }
