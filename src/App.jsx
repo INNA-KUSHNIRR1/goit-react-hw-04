@@ -20,11 +20,10 @@ function App() {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        setImage([]);
         setIsLoading(true);
         setError(false);
         const { results } = await fetchImagesFromApi(query, page);
-        setImage((prev) => [...prev, ...results]);
+        setImage((prevImages) => [...prevImages, ...results]);
       } catch {
         setError(true);
       } finally {
@@ -34,13 +33,13 @@ function App() {
     query && fetchImages();
   }, [query, page]);
 
-  const searchImages = async (textInput) => {
+  const searchImages = (textInput) => {
+    setImage([]);
     setPage(1);
     setQuery(textInput);
   };
-  const showNextPage = async () => {
-    setPage(page + 1);
-    // console.log("click");
+  const showNextPage = () => {
+    setPage((prevPage) => prevPage + 1);
   };
   return (
     <>
@@ -48,7 +47,9 @@ function App() {
       {images.length > 0 && <ImageGallery images={images} />}
       {isLoading && <Loader />}
       {error && <ErrorMessage />}
-      {images.length > 0 && <LoadMoreBtn onClick={showNextPage} />}
+      {images.length > 0 && !isLoading && (
+        <LoadMoreBtn onClick={showNextPage} />
+      )}
       <ImageModal />
     </>
   );

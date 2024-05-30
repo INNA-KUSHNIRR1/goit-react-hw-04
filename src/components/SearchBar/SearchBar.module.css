@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
+  margin-bottom: 40px;
 }
 .input {
   font-size: 18px;

@@ -3,8 +3,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* color-scheme: light dark; */
-  /* color: rgba(100, 18, 18, 0.986); */
   background-color: #534f4f;
 
   font-synthesis: none;
@@ -14,12 +12,11 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(to right, blue, pink);
   color: white;
-  box-sizing: border-box;
 }
 
 h1 {
@@ -27,15 +24,6 @@ h1 {
   line-height: 1.1;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+p {
+  margin: 0;
+}
