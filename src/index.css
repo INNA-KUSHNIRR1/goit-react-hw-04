@@ -19,6 +19,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(to right, blue, pink);
   color: white;
+  box-sizing: border-box;
 }
 
 h1 {
