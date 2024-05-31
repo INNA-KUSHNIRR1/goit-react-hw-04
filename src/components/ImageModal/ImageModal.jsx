@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import style from "./ImageModal.module.css";
 import Modal from "react-modal";
 
@@ -12,20 +11,11 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
+    background: "#232224",
+    border: "2px solid rgb(122 123 131)",
   },
 };
 const ImageModal = ({ isOpen, selectedImage, closeModal }) => {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("modal-open");
-    } else {
-      document.body.classList.remove("modal-open");
-    }
-
-    return () => {
-      document.body.classList.remove("modal-open");
-    };
-  }, [isOpen]);
   return (
     <>
       <Modal

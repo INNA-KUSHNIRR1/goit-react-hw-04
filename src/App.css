@@ -4,3 +4,7 @@
   padding: 2rem 2rem;
   text-align: center;
 }
+
+body.modal-open {
+  overflow: hidden;
+}
