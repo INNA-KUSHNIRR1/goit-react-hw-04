@@ -14,8 +14,8 @@ function App() {
   const [error, setError] = useState(false);
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("");
-
-  console.log("State images", images);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -38,19 +38,39 @@ function App() {
     setPage(1);
     setQuery(textInput);
   };
+
   const showNextPage = () => {
     setPage((prevPage) => prevPage + 1);
   };
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
   return (
     <>
       <SearchBar submit={searchImages}></SearchBar>
-      {images.length > 0 && <ImageGallery images={images} />}
+      {images.length > 0 && (
+        <ImageGallery images={images} onImageClick={openModal} />
+      )}
+
+      <ImageModal
+        isOpen={isModalOpen}
+        selectedImage={selectedImage}
+        closeModal={closeModal}
+      />
+
       {isLoading && <Loader />}
       {error && <ErrorMessage />}
       {images.length > 0 && !isLoading && (
         <LoadMoreBtn onClick={showNextPage} />
       )}
-      <ImageModal />
     </>
   );
 }
