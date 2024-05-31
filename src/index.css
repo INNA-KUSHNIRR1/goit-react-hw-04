@@ -15,7 +15,7 @@ body {
   margin: 0 auto;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(to right, blue, pink);
+  background: linear-gradient(to right, rgb(77, 77, 223), rgb(231, 140, 137));
   color: white;
 }
 
