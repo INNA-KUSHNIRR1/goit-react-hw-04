@@ -54,6 +54,7 @@ function App() {
     setImage([]);
     setPage(1);
     setQuery(textInput);
+    setIsEmpty(false);
   };
 
   const showNextPage = () => {
