@@ -19,11 +19,11 @@
 }
 
 .btn:hover {
-  background: linear-gradient(to right, pink, blue);
+  background: linear-gradient(to right, pink, rgb(54, 54, 207));
 }
 .btn:focus,
 .btn:focus-visible {
   outline: none;
   border-color: gray;
-  background: linear-gradient(to right, pink, blue);
+  background: linear-gradient(to right, pink, rgb(54, 54, 207));
 }
