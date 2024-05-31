@@ -1,10 +1,10 @@
 import style from "./ImageCard.module.css";
 
-const ImageCard = ({ srcForModal, alt, url, onImageClick }) => {
+const ImageCard = ({ srcForModal, alt, srcSmall, onImageClick }) => {
   return (
     <div className={style.card}>
       <img
-        src={url}
+        src={srcSmall}
         alt={alt}
         width="300"
         onClick={() => onImageClick(srcForModal)}

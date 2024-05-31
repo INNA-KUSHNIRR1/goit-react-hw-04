@@ -11,7 +11,7 @@ const ImageGallery = ({ images, onImageClick }) => {
               id={image.id}
               srcForModal={image.urls.regular}
               alt={image.alt_description}
-              url={image.urls.small}
+              srcSmall={image.urls.small}
               onImageClick={onImageClick}
             />
           </li>
