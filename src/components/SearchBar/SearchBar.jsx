@@ -6,16 +6,20 @@ const SearchBar = ({ submit }) => {
     e.preventDefault();
     const form = e.target;
     const textInput = form.elements.text.value.trim();
-    
+
     if (textInput === "") {
       toast("Please, write the text for the search images", {
         duration: 4000,
         position: "center-center",
-        style: { color: "#fff", backgroundColor: "#5c32a8" },
+        style: {
+          color: "rgb(189, 187, 187)",
+          backgroundColor: "rgb(13 13 27 / 80%)",
+          borderRadius: "0px",
+        },
       });
       return;
     }
-   
+
     submit(textInput);
     form.reset();
   };

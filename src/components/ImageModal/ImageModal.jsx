@@ -1,5 +1,6 @@
 import style from "./ImageModal.module.css";
 import Modal from "react-modal";
+import { FcLike } from "react-icons/fc";
 
 Modal.setAppElement("#root");
 
@@ -15,7 +16,7 @@ const customStyles = {
     border: "2px solid rgb(122 123 131)",
   },
 };
-const ImageModal = ({ isOpen, selectedImage, closeModal }) => {
+const ImageModal = ({ isOpen, likes, author, srcModal, closeModal }) => {
   return (
     <>
       <Modal
@@ -25,7 +26,16 @@ const ImageModal = ({ isOpen, selectedImage, closeModal }) => {
         overlayClassName={style.overlay}
         style={customStyles}
       >
-        <img src={selectedImage} alt="Selected" />
+        <img src={srcModal} alt="Selected" />
+        <div className={style.div}>
+          <div className={style.title}>
+            Author:<p className={style.text}>{author}</p>
+          </div>
+          <div className={style.title}>
+            <FcLike />
+            <p className={style.text}>{likes}</p>
+          </div>
+        </div>
       </Modal>
     </>
   );

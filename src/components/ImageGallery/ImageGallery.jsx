@@ -8,8 +8,10 @@ const ImageGallery = ({ images, onImageClick }) => {
         return (
           <li className={style.card} key={image.id}>
             <ImageCard
+              likes={image.likes}
+              author={image.user.name}
               id={image.id}
-              srcForModal={image.urls.regular}
+              srcModal={image.urls.regular}
               alt={image.alt_description}
               srcSmall={image.urls.small}
               onImageClick={onImageClick}

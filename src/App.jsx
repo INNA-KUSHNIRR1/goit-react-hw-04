@@ -16,9 +16,13 @@ function App() {
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [srcModal, setSrcModal] = useState(null);
   const [isEmpty, setIsEmpty] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
+  const [likes, setLikes] = useState(null);
+  const [author, setAuthor] = useState(null);
+
+  console.log(likes);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -61,14 +65,18 @@ function App() {
     setPage((prevPage) => prevPage + 1);
   };
 
-  const openModal = (image) => {
-    setSelectedImage(image);
+  const openModal = (likes, author, srcModal) => {
+    setSrcModal(srcModal);
+    setAuthor(author);
+    setLikes(likes);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedImage(null);
+    setSrcModal(null);
+    setAuthor(null);
+    setLikes(null);
   };
 
   return (
@@ -79,9 +87,10 @@ function App() {
       )}
       {isEmpty && !isLoading && <RequestNotFound />}
       <ImageModal
-        images={images}
+        likes={likes}
+        srcModal={srcModal}
+        author={author}
         isOpen={isModalOpen}
-        selectedImage={selectedImage}
         closeModal={closeModal}
       />
       {isLoading && <Loader />}

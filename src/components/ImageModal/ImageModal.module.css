@@ -4,8 +4,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(148, 120, 160, 0.75);
+  background-color: rgba(85, 84, 107, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  align-items: center;
+}
+.text {
+  margin-left: 10px;
+  font-weight: 400;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }

@@ -1,29 +1,26 @@
 .btn {
   height: 60px;
   width: 150px;
-  border-radius: 4px;
   text-transform: uppercase;
-  color: rgb(189, 187, 187);
-
-  border: 1px solid transparent;
+  color: rgb(228, 225, 225);
+  border: 1px solid rgb(146, 148, 248);
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #6b54ec;
+  background-color: transparent;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: box-shadow 0.25s;
+  letter-spacing: 2px;
 }
 .btn:active {
   border-color: gray;
 }
 
-.btn:hover {
-  background: linear-gradient(to right, pink, rgb(54, 54, 207));
+.btn:hover,
+.btn:focus {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
 }
-.btn:focus,
-.btn:focus-visible {
+.btn:focus {
   outline: none;
-  border-color: gray;
-  background: linear-gradient(to right, pink, rgb(54, 54, 207));
 }
