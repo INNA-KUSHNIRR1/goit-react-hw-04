@@ -11,7 +11,6 @@ const ImageCard = ({
   return (
     <div className={style.card}>
       <img
-        className={style.img}
         src={srcSmall}
         alt={alt}
         width="300"

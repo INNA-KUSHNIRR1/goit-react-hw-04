@@ -5,9 +5,9 @@
   right: 0;
   bottom: 0;
   background-color: rgba(85, 84, 107, 0.75);
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .div {
