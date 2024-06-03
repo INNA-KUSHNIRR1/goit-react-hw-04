@@ -21,9 +21,10 @@ function App() {
   const [totalPages, setTotalPages] = useState(0);
   const [likes, setLikes] = useState(null);
   const [author, setAuthor] = useState(null);
+  const [isBtnDisabled, setIsBtnDisabled] = useState(false);
+  
 
-  console.log(likes);
-
+  
   useEffect(() => {
     const fetchImages = async () => {
       try {
@@ -32,6 +33,8 @@ function App() {
         const { results, total_pages } = await fetchImagesFromApi(query, page);
         setImage((prevImages) => [...prevImages, ...results]);
         results.length === 0 && setIsEmpty(true);
+        results.length > 0 && setIsBtnDisabled(true);
+
         setTotalPages(total_pages);
       } catch {
         setError(true);
@@ -81,7 +84,12 @@ function App() {
 
   return (
     <>
-      <SearchBar submit={searchImages}></SearchBar>
+      <SearchBar
+        submit={searchImages}
+        isBtnDisabled={isBtnDisabled}
+        setIsBtnDisabled={setIsBtnDisabled}
+        
+      ></SearchBar>
       {images.length > 0 && (
         <ImageGallery images={images} onImageClick={openModal} />
       )}

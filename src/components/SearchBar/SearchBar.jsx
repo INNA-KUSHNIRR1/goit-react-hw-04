@@ -1,7 +1,8 @@
+import clsx from "clsx";
 import style from "./SearchBar.module.css";
 import toast, { Toaster } from "react-hot-toast";
 
-const SearchBar = ({ submit }) => {
+const SearchBar = ({ submit, isBtnDisabled, setIsBtnDisabled }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -23,9 +24,17 @@ const SearchBar = ({ submit }) => {
     submit(textInput);
     form.reset();
   };
+  const handleInput = (e) => {
+    const text = e.target.value;
+    text !== "" && setIsBtnDisabled(false);
+  };
   return (
     <header className={style.header}>
-      <form className={style.form} onSubmit={handleSubmit}>
+      <form
+        className={style.form}
+        onSubmit={handleSubmit}
+        onInput={handleInput}
+      >
         <input
           className={style.input}
           type="text"
@@ -34,7 +43,11 @@ const SearchBar = ({ submit }) => {
           placeholder="Search images and photos"
           name="text"
         />
-        <button className={style.btn} type="submit">
+        <button
+          className={clsx(isBtnDisabled ? style.btnDisabled : style.btn)}
+          type="submit"
+          disabled={isBtnDisabled}
+        >
           Search
         </button>
       </form>
