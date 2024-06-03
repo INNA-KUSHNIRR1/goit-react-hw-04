@@ -9,6 +9,7 @@ const fetchImagesFromApi = async (textInput = "", page) => {
     query: textInput,
     page,
     per_page: 12,
+    orientation: "landscape",
   });
   const { data } = await axios.get(`/search/photos?${params}`);
 

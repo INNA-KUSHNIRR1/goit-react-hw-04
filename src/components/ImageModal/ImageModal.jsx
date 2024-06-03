@@ -15,7 +15,7 @@ const customStyles = {
     background: "#232224",
     border: "2px solid rgb(122 123 131)",
     minWidth: "300px",
-    maxWidth: "500px",
+    maxWidth: "800px",
   },
 };
 const ImageModal = ({ isOpen, likes, author, srcModal, closeModal }) => {
