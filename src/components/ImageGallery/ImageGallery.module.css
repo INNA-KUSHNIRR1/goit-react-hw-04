@@ -6,6 +6,7 @@
   justify-content: center;
   gap: 24px;
   width: 100%;
+  margin-bottom: 20px;
 }
 .card {
   border: 1px solid rgb(170, 169, 172);

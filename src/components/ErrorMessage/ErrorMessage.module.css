@@ -1,5 +1,6 @@
 .error {
-  color: hsl(315, 74%, 82%);
+  color: white;
   text-decoration: underline;
   font-size: 14px;
+  margin-bottom: 20px;
 }
