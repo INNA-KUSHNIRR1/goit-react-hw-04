@@ -1,9 +1,23 @@
+.header {
+  background-color: rgb(6, 4, 20);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  z-index: 10;
+}
 .form {
+  pointer-events: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
-  margin-bottom: 40px;
+  margin-top: 0;
+  padding: 20px 0;
 }
 .input {
   font-size: 18px;

@@ -1,3 +1,8 @@
+.errorBox {
+  margin-top: 160px;
+  
+}
+
 .error {
   color: white;
   text-decoration: underline;

@@ -12,6 +12,7 @@
   cursor: pointer;
   transition: box-shadow 0.25s;
   letter-spacing: 2px;
+  margin-top: 95px;
 }
 .btn:active {
   border-color: gray;
