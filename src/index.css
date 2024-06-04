@@ -16,6 +16,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: rgb(35, 35, 51, 0.8);
+  background-image: url(https://flomaster.top/o/uploads/posts/2023-11/1700360135_flomaster-top-p-fioletovie-meduzi-v-sredizemnom-more-naris-3.jpg);
+
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
   color: white;
 }
 

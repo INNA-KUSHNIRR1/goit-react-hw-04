@@ -14,7 +14,7 @@ const SearchBar = ({ submit, isBtnDisabled, setIsBtnDisabled }) => {
         position: "center-center",
         style: {
           color: "rgb(189, 187, 187)",
-          backgroundColor: "rgb(13 13 27 / 80%)",
+          backgroundColor: "rgba(146, 148, 248, 0.4)",
           borderRadius: "0px",
         },
       });
